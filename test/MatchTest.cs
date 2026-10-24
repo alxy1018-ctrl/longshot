@@ -58,7 +58,7 @@ internal static class MatchTestProgram
             using (Bitmap b = Crop(source, 2500, viewH))
             {
                 ShiftInfo no = Matcher.FindShift(a, b);
-                bool ok = !no.Valid || no.Shift >= 8;
+                bool ok = !no.Valid;
                 Console.WriteLine(string.Format("unrelated        got shift={0} valid={1} score={2:F2}  {3}",
                     no.Shift, no.Valid, no.Score, ok ? "OK" : "FAIL"));
                 if (!ok) _failed++;

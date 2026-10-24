@@ -26,6 +26,8 @@ namespace LongShotTest
         public TestForm()
         {
             Text = "LongShot Test Target (do not touch)";
+            // 激活工具可能把最大化窗口还原；正常尺寸也要足够显示编号。
+            ClientSize = new Size(1100, 800);
             WindowState = FormWindowState.Maximized;
             BackColor = Color.White;
             _panel = new ScrollPanel();
